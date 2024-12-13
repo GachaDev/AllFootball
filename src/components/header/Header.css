@@ -20,13 +20,13 @@ header h1 a {
 	text-decoration: none;
 }
 
-.routes {
+nav {
 	width: 33.33%;
 	display: flex;
 	justify-content: center;
 }
 
-.routes a {
+nav a {
 	color: white;
 	text-decoration: none;
 	padding: 10px;

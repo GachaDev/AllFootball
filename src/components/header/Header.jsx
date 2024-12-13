@@ -8,10 +8,10 @@ export default function Header() {
 				<h1>
 					<Link to={'/'}>ALLFOOTBALL</Link>
 				</h1>
-				<div className='routes'>
+				<nav>
 					<Link to={'/noticias'}>NOTICIAS</Link>
 					<Link to={'/contacto'}>CONTACTO</Link>
-				</div>
+				</nav>
 				<div className='search'>
 					<input type='text' placeholder='Buscar' />
 					<Link to={'/login'}>Iniciar Sesión</Link>
