@@ -13,7 +13,7 @@ export default function Login() {
 				<div>
 					<hr />
 				</div>
-				<Link to={'/registro'}>Registro</Link>
+				<Link to={'/registro'}>¿No tienes cuenta? Regístrate.</Link>
 			</form>
 		</div>
 	);
