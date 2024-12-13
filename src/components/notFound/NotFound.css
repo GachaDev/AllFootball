@@ -1,0 +1,29 @@
+.notFound {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: calc(100vh - 67px);
+	gap: 20px;
+}
+
+.notFound h1 {
+	font-family: var(--font-title);
+	color: var(--color-secondary);
+	font-size: 128px;
+}
+
+.notFound p {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.notFound a {
+	text-decoration: none;
+	background-color: var(--color-primary);
+	color: white;
+	padding: 5px 10px;
+	border-radius: 4px;
+	margin-top: 20px;
+	text-transform: uppercase;
+}
