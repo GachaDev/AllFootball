@@ -8,10 +8,10 @@
 .contact form {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 40px;
 	width: 50%;
 	border: 1px solid #dddddd;
-	padding: 40px;
+	padding: 60px 40px;
 	border-radius: 4px;
 }
 
@@ -56,12 +56,6 @@
 
 .contact form button:hover {
 	opacity: 0.9;
-}
-
-@media screen and (max-height: 700px) {
-	.contact form {
-		border: none;
-	}
 }
 
 @media screen and (max-width: 1000px) {

@@ -9,10 +9,10 @@
 .login form {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 40px;
 	width: 50%;
 	border: 1px solid var(--color-border);
-	padding: 40px;
+	padding: 60px 40px;
 	border-radius: 4px;
 }
 
