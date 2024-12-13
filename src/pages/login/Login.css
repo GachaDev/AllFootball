@@ -1,0 +1,85 @@
+.login {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: calc(100vh - 67px);
+}
+
+.login form {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	width: 50%;
+	border: 1px solid var(--color-border);
+	padding: 60px 40px;
+	border-radius: 4px;
+}
+
+.login form h1 {
+	text-align: center;
+	font-family: var(--font-title);
+	color: var(--color-primary);
+	font-size: 60px;
+}
+
+.login form input,
+.login form button {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid var(--color-border);
+	outline: none;
+	border-radius: 4px;
+}
+
+.login form input:focus,
+.login form button:focus {
+	border: 1px solid var(--color-primary);
+}
+
+.login form button {
+	background-color: var(--color-secondary);
+	color: black;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+.login form button:hover {
+	opacity: 0.9;
+}
+
+.login form a {
+	text-align: center;
+	color: var(--color-third);
+	text-decoration: none;
+}
+
+.login form a:hover {
+	color: black;
+}
+
+.login form div {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.login form hr {
+	width: 300px;
+	border: 1px solid var(--color-border);
+}
+
+@media screen and (max-width: 1000px) {
+	.login form {
+		width: 100%;
+		border: none;
+	}
+
+	.login form h1 {
+		font-size: 45px;
+	}
+}
