@@ -30,6 +30,8 @@ header h1 a {
 	color: white;
 	text-decoration: none;
 	padding: 10px;
+	font-weight: bolder;
+	font-size: large;
 }
 
 .search {
