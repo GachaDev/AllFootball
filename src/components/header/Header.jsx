@@ -5,14 +5,16 @@ export default function Header() {
 	return (
 		<>
 			<header>
-				<h1>ALLFOOTBALL</h1>
+				<h1>
+					<Link to={'/'}>ALLFOOTBALL</Link>
+				</h1>
 				<div className='routes'>
 					<Link to={'/noticias'}>NOTICIAS</Link>
 					<Link to={'/contacto'}>CONTACTO</Link>
 				</div>
-				<div>
-					<Link to={'/login'}>LOGIN</Link>
-					<Link to={'/registro'}>REGISTRO</Link>
+				<div className='search'>
+					<input type='text' placeholder='Buscar' />
+					<Link to={'/login'}>Iniciar Sesión</Link>
 				</div>
 			</header>
 			<Outlet />
