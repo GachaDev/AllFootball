@@ -71,6 +71,26 @@ export default function Estadisticas() {
 		}
 	]);
 
+	const [valorPosesion, setValorPosesion] = useState(70);
+	const [totalFuerasJuego, setTotalFuerasJuego] = useState({
+		home: 1,
+		away: 5
+	});
+	const [saquesDeEsquina, setSaquesDeEsquina] = useState({
+		home: 8,
+		away: 2
+	});
+
+	const totalFuerasDeJuego = totalFuerasJuego.home + totalFuerasJuego.away;
+	const porcentajeHome = totalFuerasDeJuego
+		? (totalFuerasJuego.home / totalFuerasDeJuego) * 100
+		: 0;
+
+	const totalSaquesDeEsquina = saquesDeEsquina.home + saquesDeEsquina.away;
+	const porcentajeSaquesDeEsquina = totalSaquesDeEsquina
+		? (saquesDeEsquina.home / totalSaquesDeEsquina) * 100
+		: 0;
+
 	return (
 		<div className='estadisticas'>
 			<Match match={matchesData[0]} />
@@ -100,6 +120,45 @@ export default function Estadisticas() {
 				<div className='estadistica'>
 					<section>
 						<h1>Estadísticas del partido</h1>
+						<div className='estadisticaTeams'>
+							<div className='puntuacion'>
+								<span>{valorPosesion}%</span>
+								<span>Posesión</span>
+								<span>{100 - valorPosesion}%</span>
+							</div>
+							<div className='barra'>
+								<div
+									className='barra-llenado'
+									style={{ width: `${valorPosesion}%` }}
+								></div>
+							</div>
+						</div>
+						<div className='estadisticaTeams'>
+							<div className='puntuacion'>
+								<span>{totalFuerasJuego.home}</span>
+								<span>Fueras de juego</span>
+								<span>{totalFuerasJuego.away}</span>
+							</div>
+							<div className='barra'>
+								<div
+									className='barra-llenado'
+									style={{ width: `${porcentajeHome}%` }}
+								></div>
+							</div>
+						</div>
+						<div className='estadisticaTeams'>
+							<div className='puntuacion'>
+								<span>{saquesDeEsquina.home}</span>
+								<span>Saques de esquina</span>
+								<span>{saquesDeEsquina.away}</span>
+							</div>
+							<div className='barra'>
+								<div
+									className='barra-llenado'
+									style={{ width: `${porcentajeSaquesDeEsquina}%` }}
+								></div>
+							</div>
+						</div>
 					</section>
 				</div>
 			</div>
