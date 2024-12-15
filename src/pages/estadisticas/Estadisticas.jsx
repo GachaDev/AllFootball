@@ -4,6 +4,8 @@ import matchesData from '../../assets/matches.json';
 import Match from '../../components/match/Match';
 import GolHome from '../../components/gol/GolHome';
 import GolAway from '../../components/gol/GolAway';
+import CambioAway from '../../components/cambio/CambioAway';
+import CambioHome from '../../components/cambio/CambioHome';
 
 export default function Estadisticas() {
 	const [goles, setGoles] = useState([
@@ -40,6 +42,35 @@ export default function Estadisticas() {
 		}
 	]);
 
+	const [cambios, setCambios] = useState([
+		{
+			team: 'away',
+			time: 80,
+			jugadores: {
+				enter: {
+					name: 'Álvaro Rodríguez',
+					image: 'https://www.zerozero.pt/img/jogadores/new/59/35/915935_alvaro_rodriguez_20241123192730.png'
+				},
+				exit: {
+					name: 'Borja Mayoral'
+				}
+			}
+		},
+		{
+			team: 'home',
+			time: 85,
+			jugadores: {
+				enter: {
+					name: 'Julian Alvarez',
+					image: 'https://www.ceroacero.es/img/jogadores/new/57/80/675780_julian_alvarez_20240909211227.png'
+				},
+				exit: {
+					name: 'Antoine Griezmann'
+				}
+			}
+		}
+	]);
+
 	return (
 		<div className='estadisticas'>
 			<Match match={matchesData[0]} />
@@ -57,6 +88,13 @@ export default function Estadisticas() {
 					</section>
 					<section>
 						<h1>Cambios</h1>
+						{cambios.map((cambio, index) =>
+							cambio.team === 'home' ? (
+								<CambioHome cambio={cambio} key={index} />
+							) : (
+								<CambioAway cambio={cambio} key={index} />
+							)
+						)}
 					</section>
 				</div>
 				<div className='estadistica'>

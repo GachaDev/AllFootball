@@ -28,7 +28,8 @@
 	padding: 10px;
 }
 
-.gol {
+.gol,
+.cambio {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -39,36 +40,42 @@
 	padding: 10px;
 }
 
-.gol div {
+.gol div,
+.cambio div {
 	display: flex;
 	width: 100%;
 	align-items: center;
 	gap: 10px;
 }
 
-.gol .time {
+.gol .time,
+.cambio .time {
 	font-size: 20px;
 	color: var(--color-time);
 }
 
-.gol .anotadores {
+.gol .anotadores,
+.cambio .jugadores {
 	display: flex;
 	flex-direction: column;
 }
 
-.gol img {
+.gol img,
+.cambio img {
 	border-radius: 50%;
 	height: 50px;
 	border: 1px solid var(--color-border);
 }
 
-.golHome .anotadores div {
+.golHome .anotadores div,
+.cambioHome .jugadores div {
 	display: flex;
 	justify-content: right;
 }
 
-.golHome {
-	margin-left: 10px;
+.jugadores .exit {
+	font-size: 12px;
+	font-weight: 300;
 }
 
 @media screen and (max-width: 600px) {
