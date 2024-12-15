@@ -1,6 +1,16 @@
+import { useNavigate } from 'react-router-dom';
+
 export default function Match({ match }) {
+	const navigate = useNavigate();
+
+	const goTo = () => {
+		if (match.score.fullTime.home) {
+			navigate('/estadisticas');
+		}
+	};
+
 	return (
-		<div className='match'>
+		<div onClick={goTo} className='match'>
 			<h2>Jornada {match.matchday}</h2>
 			<div className='teams'>
 				<div className='team teamHome'>
