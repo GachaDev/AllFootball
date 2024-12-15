@@ -43,6 +43,10 @@
 	gap: 20px;
 }
 
+.competition.result {
+	margin-top: 20px !important;
+}
+
 .competition h1 {
 	font-size: 24px;
 	font-weight: normal;
@@ -97,6 +101,10 @@
 	font-size: 20px;
 	font-weight: normal;
 	text-transform: uppercase;
+}
+
+.match h2 {
+	font-weight: normal;
 }
 
 @media (max-width: 600px) {
