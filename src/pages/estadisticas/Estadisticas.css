@@ -1,0 +1,78 @@
+.infoEstadisticas {
+	margin: 20px;
+	display: flex;
+	gap: 20px;
+}
+
+.infoEstadisticas .estadistica {
+	width: 100%;
+	gap: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.infoEstadisticas section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.infoEstadisticas section h1 {
+	font-size: 24px;
+	font-weight: normal;
+	text-transform: uppercase;
+	background-color: var(--color-border);
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+}
+
+.gol {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	gap: 20px;
+	border: 1px solid var(--color-border);
+	padding: 10px;
+}
+
+.gol div {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	gap: 10px;
+}
+
+.gol .time {
+	font-size: 20px;
+	color: var(--color-time);
+}
+
+.gol .anotadores {
+	display: flex;
+	flex-direction: column;
+}
+
+.gol img {
+	border-radius: 50%;
+	height: 50px;
+	border: 1px solid var(--color-border);
+}
+
+.golHome .anotadores div {
+	display: flex;
+	justify-content: right;
+}
+
+.golHome {
+	margin-left: 10px;
+}
+
+@media screen and (max-width: 600px) {
+	.infoEstadisticas {
+		flex-direction: column;
+	}
+}

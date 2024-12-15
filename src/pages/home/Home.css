@@ -75,6 +75,14 @@
 	gap: 20px;
 }
 
+.match .teams span {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 80px;
+}
+
 .teamHome {
 	display: flex;
 	flex-direction: row;

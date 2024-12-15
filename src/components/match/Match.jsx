@@ -8,10 +8,12 @@ export default function Match({ match }) {
 					<img alt={match.homeTeam.name} src={match.homeTeam.crest} />
 				</div>
 				<span>
-					{new Date(match.utcDate).toLocaleTimeString('es-ES', {
-						hour: '2-digit',
-						minute: '2-digit'
-					})}
+					{match.score.fullTime.home
+						? `${match.score.fullTime.home} - ${match.score.fullTime.away}`
+						: new Date(match.utcDate).toLocaleTimeString('es-ES', {
+								hour: '2-digit',
+								minute: '2-digit'
+						  })}
 				</span>
 				<div className='team teamAway'>
 					<img src={match.awayTeam.crest} alt={match.awayTeam.name} />
