@@ -9,12 +9,12 @@ export default function GolHome({ gol }) {
 				<div className='anotadores'>
 					<div>
 						<span>{gol.anotador.name}</span>
-						<IoFootball />
+						<IoFootball size={20} />
 					</div>
 					{gol.asistente ? (
 						<div>
 							<span>{gol.asistente.name}</span>
-							<TbShoe />
+							<TbShoe size={20} />
 						</div>
 					) : null}
 				</div>

@@ -9,12 +9,12 @@ export default function GolAway({ gol }) {
 			<div>
 				<div className='anotadores'>
 					<div>
-						<IoFootball />
+						<IoFootball size={20} />
 						<span>{gol.anotador.name}</span>
 					</div>
 					{gol.asistente ? (
 						<div>
-							<TbShoe />
+							<TbShoe size={20} />
 							<span>{gol.asistente.name}</span>
 						</div>
 					) : null}
